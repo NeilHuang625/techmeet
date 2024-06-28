@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using techmeet.Data;
+using techmeet.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options=>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+// Register repositories
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 // Allow CORS
 builder.Services.AddCors( options => {
@@ -19,6 +25,7 @@ builder.Services.AddCors( options => {
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -32,6 +39,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
+app.UseRouting();
+app.UseAuthorization();
+app.MapControllers();
 
 var summaries = new[]
 {
