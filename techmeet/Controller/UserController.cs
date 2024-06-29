@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using techmeet.Models;
 using techmeet.Repositories;
 
 namespace techmeet.Controllers
