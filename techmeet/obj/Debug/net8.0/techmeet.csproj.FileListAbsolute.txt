@@ -135,3 +135,4 @@
 /Users/feihuang/Desktop/msa2024/techmeet/techmeet/obj/Debug/net8.0/techmeet.pdb
 /Users/feihuang/Desktop/msa2024/techmeet/techmeet/obj/Debug/net8.0/techmeet.genruntimeconfig.cache
 /Users/feihuang/Desktop/msa2024/techmeet/techmeet/obj/Debug/net8.0/ref/techmeet.dll
+/Users/feihuang/Desktop/msa2024/techmeet/techmeet/obj/Debug/net8.0/techmeet.sourcelink.json

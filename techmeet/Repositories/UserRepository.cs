@@ -30,11 +30,16 @@ namespace techmeet.Repositories{
         }
 
         public async Task DeleteUserAsync(int id){
+            // Delete all comments by the user
+            var comments = _context.Comments.Where(c=>c.UserId == id);
+            _context.Comments.RemoveRange(comments);
+
             var user = await _context.Users.FindAsync(id);
             if(user != null){
                 _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
             }
+
+            await _context.SaveChangesAsync();
         }
     }
 }

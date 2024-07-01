@@ -12,7 +12,7 @@ using techmeet.Data;
 namespace techmeet.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240623082242_InitialCreate")]
+    [Migration("20240701115610_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace techmeet.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Models.Comment", b =>
+            modelBuilder.Entity("techmeet.Models.Comment", b =>
                 {
                     b.Property<int>("CommentId")
                         .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace techmeet.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("Models.Event", b =>
+            modelBuilder.Entity("techmeet.Models.Event", b =>
                 {
                     b.Property<int>("EventId")
                         .ValueGeneratedOnAdd()
@@ -84,7 +84,7 @@ namespace techmeet.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Models.User", b =>
+            modelBuilder.Entity("techmeet.Models.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -109,18 +109,18 @@ namespace techmeet.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Models.Comment", b =>
+            modelBuilder.Entity("techmeet.Models.Comment", b =>
                 {
-                    b.HasOne("Models.Event", "Event")
+                    b.HasOne("techmeet.Models.Event", "Event")
                         .WithMany("Comments")
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.User", "User")
+                    b.HasOne("techmeet.Models.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Event");
@@ -128,9 +128,9 @@ namespace techmeet.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Models.Event", b =>
+            modelBuilder.Entity("techmeet.Models.Event", b =>
                 {
-                    b.HasOne("Models.User", "User")
+                    b.HasOne("techmeet.Models.User", "User")
                         .WithMany("Events")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -139,12 +139,12 @@ namespace techmeet.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Models.Event", b =>
+            modelBuilder.Entity("techmeet.Models.Event", b =>
                 {
                     b.Navigation("Comments");
                 });
 
-            modelBuilder.Entity("Models.User", b =>
+            modelBuilder.Entity("techmeet.Models.User", b =>
                 {
                     b.Navigation("Comments");
 
