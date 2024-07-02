@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ONto1rg2z+i9PNdVRyKKmkANDNEjZTAApL6U1wPnFxrWC34Qv/nrQcmUsWaxPjh1IsWxhHocqEEVqK1LcBVJqg==",
+  "dgSpecHash": "S16RhUSBh4MdL5EG7SdBFwUVj2BzopO1iz7grSMNEIHVb9tdF/f3KdPOaIgHf0yglmn3ZKExa4XQn9ofVt6Qkg==",
   "success": true,
-  "projectFilePath": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/techmeet.csproj",
+  "projectFilePath": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet.csproj",
   "expectedPackageFiles": [
     "/Users/feihuang/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/feihuang/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",

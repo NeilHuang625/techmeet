@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/techmeet.csproj": {}
+    "/Users/feihuang/Desktop/msa2024/techmeet/techmeet.csproj": {}
   },
   "projects": {
-    "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/techmeet.csproj": {
+    "/Users/feihuang/Desktop/msa2024/techmeet/techmeet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/techmeet.csproj",
+        "projectUniqueName": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet.csproj",
         "projectName": "techmeet",
-        "projectPath": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/techmeet.csproj",
+        "projectPath": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet.csproj",
         "packagesPath": "/Users/feihuang/.nuget/packages/",
-        "outputPath": "/Users/feihuang/Desktop/msa2024/techmeet/techmeet/obj/",
+        "outputPath": "/Users/feihuang/Desktop/msa2024/techmeet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/feihuang/.nuget/NuGet/NuGet.Config"
