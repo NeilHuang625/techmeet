@@ -11,7 +11,7 @@ using techmeet.Data;
 
 namespace techmeet.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(EventContext))]
     [Migration("20240701115610_InitialCreate")]
     partial class InitialCreate
     {

@@ -4,22 +4,29 @@ using techmeet.Models;
 
 namespace techmeet.Repositories{
     public class EventRepository : IEventRepository{
-        private readonly ApplicationDbContext _context;
+        private readonly EventContext _context;
 
-        public EventRepository(ApplicationDbContext context){
+        public EventRepository(EventContext context){
             _context = context;
         }
 
         public async Task<IEnumerable<Event>> GetAllEventsAsync(){
-            return await _context.Events.Include(e=>e.User).ToListAsync();
+            return await _context.Events.ToListAsync();
         }
 
         public async Task<Event?> GetEventByIdAsync(int id){
-            return await _context.Events.Include(e=>e.User).FirstOrDefaultAsync(e=>e.EventId == id);
+            return await _context.Events.FirstOrDefaultAsync(e=>e.EventId == id);
         }
 
-        public async Task AddEventAsync(Event evt){
-            await _context.Events.AddAsync(evt);
+        public async Task AddEventAsync(Event evt, IFormFile imageFile){
+            if(imageFile != null){
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "uploads", imageFile.FileName);
+                using(var fileStream = new FileStream(filePath, FileMode.Create)){
+                    await imageFile.CopyToAsync(fileStream);
+                }
+                evt.ImagePath = filePath;
+            }
+            _context.Events.Add(evt);
             await _context.SaveChangesAsync();
         }
 
