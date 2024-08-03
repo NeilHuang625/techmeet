@@ -18,7 +18,6 @@ namespace techmeet.Models
 
         public string MaxParticipants { get; set;}
 
-        [NotMapped]
         public string UserId { get; set;}
     }
 }
