@@ -5,7 +5,7 @@ namespace techmeet.Repositories{
         Task<IEnumerable<Event>> GetAllEventsAsync();
         Task<Event?> GetEventByIdAsync(int id);
         Task AddEventAsync(Event evt, IFormFile imageFile);
-        Task UpdateEventAsync(Event evt);
+        Task UpdateEventAsync(Event evt, IFormFile imageFile);
         Task DeleteEventAsync(int id);
     }
 }

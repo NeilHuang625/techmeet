@@ -136,3 +136,8 @@
 /Users/feihuang/Desktop/msa2024/techmeet/obj/Debug/net8.0/techmeet.pdb
 /Users/feihuang/Desktop/msa2024/techmeet/obj/Debug/net8.0/techmeet.genruntimeconfig.cache
 /Users/feihuang/Desktop/msa2024/techmeet/obj/Debug/net8.0/ref/techmeet.dll
+/Users/feihuang/Desktop/msa2024/techmeet/bin/Debug/net8.0/techmeet.staticwebassets.runtime.json
+/Users/feihuang/Desktop/msa2024/techmeet/bin/Debug/net8.0/Azure.Storage.Blobs.dll
+/Users/feihuang/Desktop/msa2024/techmeet/bin/Debug/net8.0/Azure.Storage.Common.dll
+/Users/feihuang/Desktop/msa2024/techmeet/bin/Debug/net8.0/System.ClientModel.dll
+/Users/feihuang/Desktop/msa2024/techmeet/bin/Debug/net8.0/System.IO.Hashing.dll

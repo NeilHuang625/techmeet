@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "jmq1q8qaXxWaUNK1T6uYJwgzYDaNdIkrYAT351cPfAY=",
+  "Hash": "eYc0JmSEjFDRn2CwHfSzS4ZvpvpYJfI5uWc4qnYf1qs=",
   "Source": "techmeet",
   "BasePath": "_content/techmeet",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "techmeet/wwwroot",
+      "Source": "techmeet",
+      "ContentRoot": "/Users/feihuang/Desktop/msa2024/techmeet/wwwroot/",
+      "BasePath": "_content/techmeet",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("techmeet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b2497c2c9cb07209bb30d3536d29ff7972ea199")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e7347f180c4ccef2e3a9d1f2f429ee2e2d7ee40")]
 [assembly: System.Reflection.AssemblyProductAttribute("techmeet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("techmeet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

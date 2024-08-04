@@ -62,15 +62,40 @@ namespace techmeet.Controllers
             return CreatedAtAction(nameof(GetEvent), new { id = evt.EventId }, evt);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutEvent(int id, Event evt)
+        public class UpdateEventFormData
         {
-            if (id != evt.EventId)
+            public int EventId { get; set; }
+            public IFormFile? File { get; set; }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public DateTime StartTime { get; set; }
+            public DateTime EndTime { get; set; }
+            public string Location { get; set; }
+            public string MaxParticipants { get; set; }
+            public string UserId { get; set; }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutEvent(int id, [FromForm] UpdateEventFormData formData)
+        {
+            if (id != formData.EventId)
             {
                 return BadRequest();
             }
 
-            await _eventRepository.UpdateEventAsync(evt);
+            var evt = new Event
+            {
+                EventId = id,
+                Title = formData.Title,
+                Description = formData.Description,
+                StartTime = formData.StartTime,
+                EndTime = formData.EndTime,
+                Location = formData.Location,
+                MaxParticipants = formData.MaxParticipants,
+                UserId = formData.UserId
+            };
+
+            await _eventRepository.UpdateEventAsync(evt, formData.File);
             return NoContent();
         }
 
